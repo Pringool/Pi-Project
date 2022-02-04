@@ -1,2 +1,2 @@
 # Pi-Project
-Pi Pthon Project for school
+Raspberry-Pi Pthon Project for school
