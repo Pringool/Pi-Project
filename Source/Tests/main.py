@@ -1,8 +1,8 @@
 import random
 
 
-class color:
-    def __init__(self, possible_colors[]):
+class color():
+    def __init__(self, possible_colors=[]):
         self.possibe_colors = possible_colors
         
     def get_random_color(self):
@@ -13,3 +13,11 @@ class color:
 class button_handler():
     def __init__(self):
         pass
+    
+        
+        
+        
+        
+c = color(["White", "Brown", "Yellow", "Blue", "Green", "Red"])
+for i in range(0,10):
+    print(c.get_random_color())
