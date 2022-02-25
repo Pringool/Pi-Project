@@ -23,7 +23,8 @@ class button_handler():
         self.right_button_color = c.get_random_color()
         self.right_button_number = random.choice(self.buttons)
     
-        
+    def right_check(self):
+        return self.right_button_color, self.right_button_number
         
 class rounds():
     def __init__(self, max_round_amount):
@@ -40,8 +41,11 @@ c = color(["White", "Brown", "Yellow", "Blue", "Green", "Red"])
 for i in range(0,10):
     print(c.get_random_color())
 
+
 b = button_handler(6)
-print(b.buttons)
+print("\n\n")
+b.right_color()
+print(b.right_check())
 
 
 
