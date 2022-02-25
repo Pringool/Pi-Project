@@ -15,12 +15,13 @@ class button_handler():
         self.amount_buttons = amount_buttons
         self.buttons = []
 
-        for i in range(1,self.amount_buttons):
-            self.buttons.append(i)
+        for i in range(self.amount_buttons):
+            self.buttons.append(i+1)
 
     
-    def check_color(self):
+    def right_color(self):
         self.right_button_color = c.get_random_color()
+        self.right_button_number = random.choice(self.buttons)
     
         
         
