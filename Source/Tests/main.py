@@ -16,7 +16,16 @@ class button_handler():
     
         
         
+class rounds():
+    def __init__(self, max_round_amount):
+        self.max_rounds = max_round_amount
         
+    def start_round(self):
+        pass
+    def next_round(self):
+        pass
+    def game_over(self):
+        pass
         
 c = color(["White", "Brown", "Yellow", "Blue", "Green", "Red"])
 for i in range(0,10):
