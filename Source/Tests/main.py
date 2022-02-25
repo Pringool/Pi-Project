@@ -11,8 +11,16 @@ class color():
     
     
 class button_handler():
-    def __init__(self):
-        pass
+    def __init__(self, amount_buttons):
+        self.amount_buttons = amount_buttons
+        self.buttons = []
+
+        for i in range(self.amount_buttons):
+            self.buttons.append(i)
+
+    
+    def check_color(self):
+        self.right_button_color = c.get_random_color()
     
         
         
@@ -30,3 +38,10 @@ class rounds():
 c = color(["White", "Brown", "Yellow", "Blue", "Green", "Red"])
 for i in range(0,10):
     print(c.get_random_color())
+
+b = button_handler(6)
+print(b.buttons)
+
+
+
+
