@@ -43,7 +43,7 @@ for i in range(0,10):
 
 
 b = button_handler(6)
-print("\n\n")
+print("\n")
 b.right_color()
 print(b.right_check())
 
