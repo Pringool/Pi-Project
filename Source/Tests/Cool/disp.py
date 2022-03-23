@@ -10,7 +10,6 @@ from lib_oled96 import ssd1306
 
 class Display:
   def __init__(self):
-    self.c = Colors()
     self.max_screen_x = 120
     self.max_screen_y = 50
     self.i2cbus = SMBus(1)    
@@ -22,9 +21,14 @@ class Display:
     self.oled.display()
 
 
-  def display_color(self):
-    self.c.choose_color()
-    self.disp.text(((self.max_screen_x // 2) - 20, self.max_screen_y // 2), f"{self.c.get_color()}", fill=1)
+  def display_color(self, color):
+    self.disp.text(((self.max_screen_x // 2) - 20, self.max_screen_y // 2), f"{color}", fill=1)
+    self.oled.display()
+    
+  def display_start(self):
+    self.disp.text(((self.max_screen_x // 2) - 20, self.max_screen_y // 2), f"Press", fill=1)
+    self.disp.text(((self.max_screen_x // 2) - 20, self.max_screen_y  // 2 + 10), "any Button",fill=1)
+    self.disp.text(((self.max_screen_x // 2) - 20, self.max_screen_y // 2 + 20), "to continue", fill=1)
     self.oled.display()
   
   
