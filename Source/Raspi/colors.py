@@ -3,7 +3,7 @@ import random
 
 class Colors:
   def __init__(self):
-    self._color = ["green","blue","white"]#,"red","yellow"]
+    self._color = ["green","blue","white","red","yellow"]
     
   def get_color(self):
     return self.color.upper()
