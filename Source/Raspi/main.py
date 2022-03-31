@@ -114,6 +114,7 @@ class Game:
         
   def round_system(self):
     self.clean_display()
+    print(self.level)
     if self.state == "Play":
       if self.level >= 0 and self.level < 5:
         self.c.choose_color()
@@ -122,11 +123,13 @@ class Game:
         self.start_t = time.time()
         self.c.choose_color()
         Game.timer -= 0.2
+        print(Game.timer)
         self.display_c()
       elif self.level >= 10 and self.level <= 15:
         self.start_t = time.time()
         self.c.choose_color()
         Game.timer -= 0.3
+        print(Game.timer)
         self.display_c(random.choice(self.posi))
       elif self.level >= 16:
         self.win()
