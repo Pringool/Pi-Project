@@ -41,6 +41,8 @@ class Game:
     
     
   def start(self):
+    self.level = 0
+    self.state = "Start"
     self.clean_display()
     self.round_system()
     self.disp.display_start()
@@ -57,8 +59,9 @@ class Game:
         Game.white.off()
       else:
         print("Wrong!")
+        self.start()
         self.clean_led()
-        self.round_system()
+
         
     elif button_pressed == "2":
       if self.c.get_color() == "GREEN":
@@ -68,8 +71,9 @@ class Game:
         Game.green.off()
       else:
         print("Wrong!")
+        self.start()
         self.clean_led()
-        self.round_system()
+
         
     elif button_pressed == "3":
       if self.c.get_color() == "BLUE":
@@ -79,8 +83,9 @@ class Game:
         Game.blue.off()
       else:
         print("Wrong!")
+        self.start()
         self.clean_led()
-        self.round_system()
+
         
     elif button_pressed == "4":
       if self.c.get_color() == "YELLOW":
@@ -90,8 +95,9 @@ class Game:
         Game.yellow.off()
       else:
         print("Wrong!")
+        self.start()
         self.clean_led()
-        self.round_system()
+
         
     elif button_pressed == "5":
       if self.c.get_color() == "RED":
@@ -101,8 +107,9 @@ class Game:
         Game.red.off()
       else:
         print("Wrong!")
+        self.start()
         self.clean_led()
-        self.round_system()
+
         
         
   def round_system(self):
@@ -126,6 +133,7 @@ class Game:
         self.display_c(random.choice(self.posi))
       elif self.level >= 16:
         self.win()
+
       
       
   def button1_p(self):
@@ -188,7 +196,6 @@ try:
     time.sleep(0.5)
     if game.level > 5 and not game.level >= 16:
       if time.time() >= game.start_t + game.timer:
-        print(":|")
         game.clean_display()
     
 except KeyboardInterrupt:
